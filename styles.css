@@ -299,7 +299,8 @@ box-shadow: white;
         display: block;
         width: 100%;
         /* max-width: 450px; */
-        max-width: 85%;
+        margin-top: 10%;
+        max-width:25em;
     }
     
     /* Add Animation - Zoom in the Modal */
