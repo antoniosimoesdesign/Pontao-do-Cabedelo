@@ -234,9 +234,9 @@ box-shadow: white;
     
     .right-side {
         order: -1; /* Ensure right-side appears first */
-        /* background-color: red; */
+        background-color: red;
         max-height: 36em;
-        max-width: 390px;
+
 
     }
 
@@ -253,7 +253,7 @@ box-shadow: white;
         cursor: pointer;
         margin-bottom: 0px; /* Space between canvas and buttons */
         z-index: 0; /* Ensure canvas is below the buttons */
-        margin-right: 2.5em;
+      
         margin-top: 6em;
     }
     
@@ -268,7 +268,7 @@ box-shadow: white;
         align-items: center;
         z-index: 1000; /* Ensure buttons are above the canvas */
         margin-top: 10px; /* Push buttons closer to the canvas */
-        margin-right: 2.5em;
+       
     }
     
     .button-text {
