@@ -189,7 +189,6 @@ box-shadow: white;
     .logo-container {
         position: absolute;
         top: 0;
-        padding: 20px;
         background-color: rgb(218, 0, 0);
         display: flex;
         justify-content: center;
