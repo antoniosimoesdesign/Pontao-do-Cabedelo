@@ -189,8 +189,7 @@ box-shadow: white;
     .logo-container {
         position: absolute;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+
         padding: 20px;
         background-color: black;
         display: flex;
@@ -212,6 +211,7 @@ box-shadow: white;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+   
     }
     
     .split-container {
@@ -234,8 +234,9 @@ box-shadow: white;
     
     .right-side {
         order: -1; /* Ensure right-side appears first */
-        background-color: red;
+        /* background-color: red; */
         max-height: 36em;
+        max-width: 390px;
 
     }
 
