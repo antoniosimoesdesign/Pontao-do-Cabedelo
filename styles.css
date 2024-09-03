@@ -169,6 +169,34 @@ box-shadow: white;
     cursor: pointer;
 }
 
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: black; /* Matches the overall theme */
+    color: white;
+    font-family: 'Archivo-Light', sans-serif;
+    font-size: 12px;
+    z-index: 100; /* Ensures the footer stays above other content */
+}
+
+#footer p {
+    margin: 0;
+}
+
+/* Ensure footer links are white */
+#footer a {
+    color: #FFFFFF; /* White color for links */
+    text-decoration: underline; /* Optional: underline links */
+    margin-left: 0.1em;
+}
+
+#footer a:hover {
+    color: #dadada; /* Lighter color on hover */
+}
+
 /* Base styles for mobile view */
 /* Base styles for mobile view */
 /* Base styles for mobile view */
@@ -339,4 +367,10 @@ box-shadow: white;
         text-decoration: none;
         cursor: pointer;
     }
+
+    #footer {
+        font-size: 11px;
+
+    }
+    
 }

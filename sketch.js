@@ -11,8 +11,8 @@ let rectX, rectY, rectWidth, rectHeight;
 let rectMargin = 20;
 
 let bottomRightImage;
-let imageScale = 0.13;
-let imageMargin = 20;
+let imageScale = 0.12;
+let imageMargin = 16;
 
 let canvas; // Store the canvas element for download
 let sketchRunning = false; // Flag to control when to draw
@@ -54,13 +54,16 @@ function initializeSketch() {
     positions = new Array(numInstances).fill().map(() => new Array(3));
     minDistance = scaleFactor * 2;
 
+    let spawnMarginX = rectMargin + scaleFactor;
+    let spawnMarginY = rectMargin + scaleFactor;
+
     for (let i = 0; i < numInstances; i++) {
         let validPosition;
         do {
             validPosition = true;
-            positions[i][0] = random(-rectWidth / 2 + scaleFactor, rectWidth / 2 - scaleFactor);
+            positions[i][0] = random(-rectWidth / 2 + spawnMarginX, rectWidth / 2 - spawnMarginX);
             // Adjust the Y position by including rectY
-            positions[i][1] = random(rectY - rectHeight / 2 + scaleFactor, rectY + rectHeight / 2 - scaleFactor);
+            positions[i][1] = random(rectY - rectHeight / 2 + spawnMarginY, rectY + rectHeight / 2 - spawnMarginY);
             positions[i][2] = random(-500, -100);
 
             for (let j = 0; j < i; j++) {
@@ -75,6 +78,7 @@ function initializeSketch() {
         } while (!validPosition);
     }
 }
+
 
 function draw() {
     if (!sketchRunning) {
