@@ -81,6 +81,7 @@ body {
     display: flex;
     cursor: pointer;
     /* box-shadow: 0 0 1px 1px white;  */
+
 }
 
 .canvas-container img{
