@@ -216,7 +216,7 @@ box-shadow: white;
     /* Center the logo at the top */
     .logo-container {
         position: absolute;
-        left: 40%;
+        left: 45%;
         top: 0;
         background-color: rgb(0, 0, 0);
         display: flex;
