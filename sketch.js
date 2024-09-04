@@ -20,7 +20,7 @@ let sketchRunning = false; // Flag to control when to draw
 function preload() {
     customFont = loadFont('Archivo-Regular.otf');
     obj = loadModel('pontao10.obj', true);
-    bottomRightImage = loadImage('logo5.png');
+    bottomRightImage = loadImage('logo.png');
 }
 
 function setup() {
