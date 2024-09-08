@@ -379,42 +379,6 @@ box-shadow: white;
 
 @media only screen and (max-width: 400px) {
 
-    .logo {
-        max-width: 45px; /* Adjusted size */
-    }
 
-    .button-text {
-        cursor: pointer;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        font-weight: 300;
-        font-size: 15px;
-    }
-
-    .canvas-container {
-        justify-content: center;
-        align-items: center;
-        transform: scale(0.55); /* Scale down for display */
-        display: flex;
-        cursor: pointer;
-        margin-bottom: 0px; /* Space between canvas and buttons */
-        z-index: 0; /* Ensure canvas is below the buttons */
-        margin-top: 5em;
-    }
-
-    #footer {
-        font-size: 10px;
-
-    }
-
-    .right-side {
-        order: -1; /* Ensure right-side appears first */
-        background-color: rgb(0, 0, 0);
-        max-height:33em;
-        width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
 
 }
