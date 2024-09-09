@@ -275,7 +275,7 @@ box-shadow: white;
     .canvas-container {
         justify-content: center;
         align-items: center;
-        transform: scale(0.57); /* Scale down for display */
+        transform: scale(0.5); /* Scale down for display */
         display: flex;
         cursor: pointer;
         margin-bottom: 0px; /* Space between canvas and buttons */
