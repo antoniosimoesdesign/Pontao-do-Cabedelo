@@ -241,7 +241,7 @@ box-shadow: white;
     
     .split-container {
         width: 100%;
-        height: 100vh;
+        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center; /* Center content vertically */
@@ -263,9 +263,7 @@ box-shadow: white;
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: center;
-        
-        
+        align-items: center; 
     }
 
     .left-side {
@@ -282,7 +280,7 @@ box-shadow: white;
         cursor: pointer;
         margin-bottom: 0px; /* Space between canvas and buttons */
         z-index: 0; /* Ensure canvas is below the buttons */
-        margin-top: 6em;
+        margin-top: 0em;
     }
     
     .canvas-container img {
