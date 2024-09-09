@@ -225,7 +225,7 @@ box-shadow: white;
     }
 
     .logo {
-        max-width: 50px; /* Adjusted size */
+        max-width: 47px; /* Adjusted size */
     }
 
     .wrapper {
@@ -259,7 +259,7 @@ box-shadow: white;
     .right-side {
         order: -2; /* Ensure right-side appears first */
         background-color: rgb(255, 0, 0);
-        max-height: 77vh;
+        max-height: 75%;
         width: 100%;
         display: flex;
         justify-content: center;
