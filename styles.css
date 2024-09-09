@@ -205,7 +205,6 @@ box-shadow: white;
 @media only screen and (max-width: 860px) {
     body {
         height: 100%;
-   
         background-color: black;
     }
     
@@ -219,7 +218,6 @@ box-shadow: white;
         position: absolute;
         left: 40%;
         top: 0;
-        background-color: rgb(0, 0, 0);
         display: flex;
         justify-content: center;
         width: fit-content;
@@ -239,17 +237,15 @@ box-shadow: white;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-   
     }
     
     .split-container {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center; /* Center content vertically */
         align-items: center;
-       
     }
     
     .left-side, .right-side {
@@ -258,28 +254,30 @@ box-shadow: white;
         justify-content: center;
         align-items: center;
         background-color: rgb(0, 0, 0);
-        
     }
     
     .right-side {
-        order: -1; /* Ensure right-side appears first */
+        order: -2; /* Ensure right-side appears first */
         background-color: rgb(0, 0, 0);
-        max-height: 36em;
+        max-height: 79%; /* Right side takes up 20% height */
         width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        
     }
 
     .left-side {
         margin-top: 10px; /* Reduced space from the canvas */
-        z-index: 1; /* Ensure buttons are above the canvas */
+        z-index: 1000; /* Ensure buttons are above the canvas */
+        flex-grow: 1; /* Left side takes up remaining height */
     }
     
     .canvas-container {
         justify-content: center;
         align-items: center;
-        transform: scale(0.6); /* Scale down for display */
+        transform: scale(0.57); /* Scale down for display */
         display: flex;
         cursor: pointer;
         margin-bottom: 0px; /* Space between canvas and buttons */
@@ -298,7 +296,7 @@ box-shadow: white;
         align-items: center;
         z-index: 1000; /* Ensure buttons are above the canvas */
         margin-top: 10px; /* Push buttons closer to the canvas */
-      
+        margin-bottom: 2.5em;
     }
     
     .button-text {
@@ -306,7 +304,6 @@ box-shadow: white;
         text-transform: uppercase;
         margin-bottom: 10px;
         font-weight: 300;
-
     }
 
     .modal {
@@ -328,9 +325,8 @@ box-shadow: white;
         margin: auto;
         display: block;
         width: 100%;
-        /* max-width: 450px; */
         margin-top: 10%;
-        max-width:95%;
+        max-width: 95%;
     }
     
     /* Add Animation - Zoom in the Modal */
@@ -372,49 +368,6 @@ box-shadow: white;
 
     #footer {
         font-size: 11px;
-
     }
-    
 }
 
-@media only screen and (max-width: 375px) {
-
-    .logo {
-        max-width: 45px; /* Adjusted size */
-    }
-
-    .button-text {
-        cursor: pointer;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        font-weight: 300;
-        font-size: 15px;
-    }
-
-    .canvas-container {
-        justify-content: center;
-        align-items: center;
-        transform: scale(0.55); /* Scale down for display */
-        display: flex;
-        cursor: pointer;
-        margin-bottom: 0px; /* Space between canvas and buttons */
-        z-index: 0; /* Ensure canvas is below the buttons */
-        margin-top: 5em;
-    }
-
-    #footer {
-        font-size: 10px;
-
-    }
-
-    .right-side {
-        order: -1; /* Ensure right-side appears first */
-        background-color: rgb(0, 0, 0);
-        max-height:33em;
-        width: 100%;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-    }
-
-}
