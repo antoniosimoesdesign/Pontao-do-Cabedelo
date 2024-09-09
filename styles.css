@@ -258,8 +258,8 @@ box-shadow: white;
     
     .right-side {
         order: -2; /* Ensure right-side appears first */
-        background-color: rgb(0, 0, 0);
-        max-height: 59%; /* Right side takes up 20% height */
+        background-color: rgb(255, 0, 0);
+        max-height: 77vh;
         width: 100%;
         display: flex;
         justify-content: center;
