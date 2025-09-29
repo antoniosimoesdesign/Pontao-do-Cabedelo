@@ -14,8 +14,8 @@ let bottomRightImage;
 let imageScale = 0.12;
 let imageMargin = 16;
 
-let canvas; // Store the canvas element for download
-let sketchRunning = false; // Flag to control when to draw
+let canvas; 
+let sketchRunning = false; 
 
 function preload() {
     customFont = loadFont('Archivo-Regular.otf');
@@ -24,19 +24,19 @@ function preload() {
 }
 
 function setup() {
-    // Create the canvas and hide it initially
+
     canvas = createCanvas(595, 842, WEBGL);
     canvas.parent('canvasContainer');
     canvas.hide();
 
     rectWidth = width - 2 * rectMargin;
     
-    // Increase the height to cover more area in the Y-axis
-    rectHeight = height * 0.87;  // Increase the height to cover more vertical space
+
+    rectHeight = height * 0.87;  
     rectX = rectMargin;
     
-    // Position the bounding box higher on the canvas
-    rectY = -height * 0.043;  // Move the spawn area higher (further up)
+
+    rectY = -height * 0.043;
 
     textFont(customFont);
 
@@ -47,8 +47,8 @@ function setup() {
 function initializeSketch() {
     numInstances = int(random(20, 50));
 
-    rotationX = random(TWO_PI);  // Randomize rotationX
-    rotationY = random(TWO_PI);  // Randomize rotationY
+    rotationX = random(TWO_PI); 
+    rotationY = random(TWO_PI);  
     rotationZ = random(TWO_PI);
 
     positions = new Array(numInstances).fill().map(() => new Array(3));
@@ -62,7 +62,7 @@ function initializeSketch() {
         do {
             validPosition = true;
             positions[i][0] = random(-rectWidth / 2 + spawnMarginX, rectWidth / 2 - spawnMarginX);
-            // Adjust the Y position by including rectY
+
             positions[i][1] = random(rectY - rectHeight / 2 + spawnMarginY, rectY + rectHeight / 2 - spawnMarginY);
             positions[i][2] = random(-500, -100);
 
@@ -82,16 +82,16 @@ function initializeSketch() {
 
 function draw() {
     if (!sketchRunning) {
-        return; // Only draw if the sketch is running
+        return; 
     }
 
     background(0);
 
-    // Draw the bounding box for the spawning area
+
     push();
-    stroke(255); // Set stroke color to white
-    noFill(); // Ensure no fill for the rectangle
-    translate(0, 0, 1); // Translate slightly forward in the Z-axis to avoid z-fighting
+    stroke(255); 
+    noFill(); 
+    translate(0, 0, 1); 
     beginShape();
     vertex(-rectWidth / 2, rectY - rectHeight / 2);
     vertex(rectWidth / 2, rectY - rectHeight / 2);
@@ -136,16 +136,16 @@ function draw() {
 
 
 function startSketch() {
-    sketchRunning = true; // Start the sketch
-    initializeSketch(); // Reinitialize positions and other settings
-    canvas.show(); // Show the canvas
+    sketchRunning = true; 
+    initializeSketch();
+    canvas.show(); 
     
-    canvas.style.width = "100%"; // Ensure the canvas is correctly scaled when displayed
-    canvas.style.height = "auto"; // Maintain aspect ratio
+    canvas.style.width = "100%";
+    canvas.style.height = "auto"; 
     
-    loop(); // Ensure draw() is called continuously
+    loop(); 
     
-    // Enable the Save button after generating the image
+
     document.getElementById('downloadBtn').removeAttribute('disabled');
 }
 
