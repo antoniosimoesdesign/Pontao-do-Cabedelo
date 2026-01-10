@@ -11,7 +11,7 @@ let rectX, rectY, rectWidth, rectHeight;
 let rectMargin = 20;
 
 let bottomRightImage;
-let imageScale = 0.12;
+let imageScale = 0.025;
 let imageMargin = 16;
 
 let canvas; 

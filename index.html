@@ -7,7 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./WEB/css/archivo.css">
-    <link rel="icon" type="image/png" href="./img/logo.png" id="favicon">
+    <link rel="icon" type="image/png" href="./img/logo3.png" id="favicon">
 </head>
 <body>
 
@@ -20,18 +20,18 @@
     
     <div class="wrapper" id="mainContent">
         <div class="logo-container">
-            <img src="./img/logo.png" alt="Logo" class="logo">
+            <img src="./img/logo3.png" alt="Logo" class="logo">
         </div>
     
         <div class="split-container">
-
+            <!-- Left side with buttons -->
             <div class="left-side">
                 <div class="buttons">
                     <span id="generateBtn" class="button-text">[Generate]</span>
                     <span id="downloadBtn" class="button-text" disabled>[Save]</span>
                 </div>
             </div>
-
+            <!-- Right side with canvas -->
             <div class="right-side">
                 <div id="canvasContainer" class="canvas-container"></div>
             </div>
@@ -39,7 +39,7 @@
     </div>
 
     <footer id="footer">
-        <p>&copy; Pontão do Cabedelo, by <a href="https://antoniosimoesdesign.github.io/Portfolio.io/"> António Simões</a></p>
+        <p>&copy; Pontão do Cabedelo, by <a href="https://antoniooooooooooooooooo.github.io/Portfolio.io/"> António Simões</a></p>
     </footer>
 
     <div id="imageModal" class="modal">
@@ -57,16 +57,16 @@
     
         splashVideo.onended = () => {
             splashScreen.classList.add('hidden');
-            mainContent.style.display = 'block'; 
-            mainContent.classList.add('visible'); 
+            mainContent.style.display = 'block'; // Show the main content
+            mainContent.classList.add('visible'); // Start the fade-in
     
-
+            // Debugging: Ensure canvas is shown and force a redraw
             console.log("Splash video ended. Showing main content...");
             canvas.show();
-            redraw();
+            redraw(); // Force redraw to ensure the canvas is rendered
         };
     
-
+        // This function updates the preview image after the sketch is generated
         function updatePreview(imageUrl) {
             previewImage.src = imageUrl;
         }
@@ -79,27 +79,27 @@
     
 
 
-
+        // Get the modal
 var modal = document.getElementById("imageModal");
 
-
+// Get the image and insert it inside the modal
 var modalImg = document.getElementById("modalImage");
 var canvasContainer = document.getElementById("canvasContainer");
 
 canvasContainer.addEventListener('click', function() {
     console.log("Canvas clicked.");
-
-    var canvasElement = canvas.elt; 
+    // Convert the canvas to a data URL and display it in the modal
+    var canvasElement = canvas.elt; // p5.js canvas element
     var dataURL = canvasElement.toDataURL("image/png");
 
     modal.style.display = "block";
     modalImg.src = dataURL;
 });
 
-
+// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-
+// When the user clicks on <span> (x), close the modal
 span.onclick = function() { 
     modal.style.display = "none";
 }
