@@ -78,10 +78,10 @@ body {
 .canvas-container {
     justify-content: center;
     align-items: center;
-    transform: scale(0.75); /* Scale down for display */
+    transform: scale(0.75);
     display: flex;
     cursor: pointer;
-    /* box-shadow: 0 0 1px 1px white;  */
+
 
 }
 
@@ -109,32 +109,31 @@ box-shadow: white;
     font-weight: 300;
 }
 
-/* The Modal (background) */
+
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    padding-top: 60px; /* Location of the box */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 60px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(24, 24, 24); /* Fallback color */
-    background-color: rgba(24, 24, 24, 0.9); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(24, 24, 24);
+    background-color: rgba(24, 24, 24, 0.9); 
 }
 
-/* Modal Content (image) */
+
 .modal-content {
     margin: auto;
     display: block;
     width: 100%;
-    /* max-width: 450px; */
     max-width: 30%;
 }
 
 
-/* Add Animation - Zoom in the Modal */
+
 .modal-content, #caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -152,7 +151,7 @@ box-shadow: white;
     to { transform: scale(1) }
 }
 
-/* The Close Button */
+
 .close {
     position: absolute;
     top: 15px;
@@ -177,32 +176,28 @@ box-shadow: white;
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: black; /* Matches the overall theme */
+    background-color: black; 
     color: white;
     font-family: 'Archivo-Light', sans-serif;
     font-size: 12px;
-    z-index: 100; /* Ensures the footer stays above other content */
+    z-index: 100; 
 }
 
 #footer p {
     margin: 0;
 }
 
-/* Ensure footer links are white */
+
 #footer a {
-    color: #FFFFFF; /* White color for links */
-    text-decoration: underline; /* Optional: underline links */
+    color: #FFFFFF; 
+    text-decoration: underline; 
     margin-left: 0.1em;
 }
 
 #footer a:hover {
-    color: #dadada; /* Lighter color on hover */
+    color: #dadada; 
 }
 
-/* Base styles for mobile view */
-/* Base styles for mobile view */
-/* Base styles for mobile view */
-/* Base styles for mobile view */
 @media only screen and (max-width: 860px) {
     body {
         height: 100%;
@@ -214,7 +209,7 @@ box-shadow: white;
         height: auto;
     }
 
-    /* Center the logo at the top */
+   
     .logo-container {
         position: absolute;
         left: 40%;
@@ -222,11 +217,11 @@ box-shadow: white;
         display: flex;
         justify-content: center;
         width: fit-content;
-        z-index: 2; /* Ensure it is above other content */
+        z-index: 2; 
     }
 
     .logo {
-        max-width: 47px; /* Adjusted size */
+        max-width: 47px;
     }
 
     .wrapper {
@@ -245,12 +240,12 @@ box-shadow: white;
         height: 90vh;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Center content vertically */
+        justify-content: center; 
         align-items: center;
     }
     
     .left-side, .right-side {
-        width: 100%; /* Full width for both sides */
+        width: 100%; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -258,7 +253,7 @@ box-shadow: white;
     }
     
     .right-side {
-        order: -2; /* Ensure right-side appears first */
+        order: -2;
         background-color: rgb(0, 0, 0);
         max-height: 75%;
         width: 100%;
@@ -269,19 +264,19 @@ box-shadow: white;
     }
 
     .left-side {
-        margin-top: 10px; /* Reduced space from the canvas */
-        z-index: 1000; /* Ensure buttons are above the canvas */
-        flex-grow: 1; /* Left side takes up remaining height */
+        margin-top: 10px; 
+        z-index: 1000; 
+        flex-grow: 1;
     }
     
     .canvas-container {
         justify-content: center;
         align-items: center;
-        transform: scale(0.5); /* Scale down for display */
+        transform: scale(0.5);
         display: flex;
         cursor: pointer;
-        margin-bottom: 0px; /* Space between canvas and buttons */
-        z-index: 0; /* Ensure canvas is below the buttons */
+        margin-bottom: 0px; 
+        z-index: 0; 
         margin-top: 0em;
     }
     
@@ -294,8 +289,8 @@ box-shadow: white;
         display: flex;
         flex-direction: column;
         align-items: center;
-        z-index: 1000; /* Ensure buttons are above the canvas */
-        margin-top: 10px; /* Push buttons closer to the canvas */
+        z-index: 1000; 
+        margin-top: 10px;
         margin-bottom: 2.5em;
     }
     
@@ -307,20 +302,20 @@ box-shadow: white;
     }
 
     .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1000; /* Sit on top */
-        padding-top: 60px; /* Location of the box */
+        display: none;
+        position: fixed; 
+        z-index: 1000;
+        padding-top: 60px; 
         left: 0;
         top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(24, 24, 24); /* Fallback color */
-        background-color: rgba(24, 24, 24, 0.9); /* Black w/ opacity */
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(24, 24, 24);
+        background-color: rgba(24, 24, 24, 0.9); 
     }
     
-    /* Modal Content (image) */
+
     .modal-content {
         margin: auto;
         display: block;
@@ -329,7 +324,7 @@ box-shadow: white;
         max-width: 95%;
     }
     
-    /* Add Animation - Zoom in the Modal */
+    
     .modal-content, #caption {
         -webkit-animation-name: zoom;
         -webkit-animation-duration: 0.6s;
@@ -347,7 +342,7 @@ box-shadow: white;
         to { transform: scale(1) }
     }
     
-    /* The Close Button */
+  
     .close {
         position: absolute;
         top: 5px;

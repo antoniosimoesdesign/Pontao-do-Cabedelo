@@ -24,14 +24,14 @@
         </div>
     
         <div class="split-container">
-            <!-- Left side with buttons -->
+
             <div class="left-side">
                 <div class="buttons">
                     <span id="generateBtn" class="button-text">[Generate]</span>
                     <span id="downloadBtn" class="button-text" disabled>[Save]</span>
                 </div>
             </div>
-            <!-- Right side with canvas -->
+
             <div class="right-side">
                 <div id="canvasContainer" class="canvas-container"></div>
             </div>
@@ -57,16 +57,16 @@
     
         splashVideo.onended = () => {
             splashScreen.classList.add('hidden');
-            mainContent.style.display = 'block'; // Show the main content
-            mainContent.classList.add('visible'); // Start the fade-in
+            mainContent.style.display = 'block'; 
+            mainContent.classList.add('visible'); 
     
-            // Debugging: Ensure canvas is shown and force a redraw
+
             console.log("Splash video ended. Showing main content...");
             canvas.show();
-            redraw(); // Force redraw to ensure the canvas is rendered
+            redraw();
         };
     
-        // This function updates the preview image after the sketch is generated
+
         function updatePreview(imageUrl) {
             previewImage.src = imageUrl;
         }
@@ -79,27 +79,27 @@
     
 
 
-        // Get the modal
+
 var modal = document.getElementById("imageModal");
 
-// Get the image and insert it inside the modal
+
 var modalImg = document.getElementById("modalImage");
 var canvasContainer = document.getElementById("canvasContainer");
 
 canvasContainer.addEventListener('click', function() {
     console.log("Canvas clicked.");
-    // Convert the canvas to a data URL and display it in the modal
-    var canvasElement = canvas.elt; // p5.js canvas element
+
+    var canvasElement = canvas.elt; 
     var dataURL = canvasElement.toDataURL("image/png");
 
     modal.style.display = "block";
     modalImg.src = dataURL;
 });
 
-// Get the <span> element that closes the modal
+
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on <span> (x), close the modal
+
 span.onclick = function() { 
     modal.style.display = "none";
 }
